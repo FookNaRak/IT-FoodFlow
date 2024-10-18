@@ -1,0 +1,486 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+    overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.main-container {
+    position: relative;
+    width: 430px;
+    height: 932px;
+    margin: 0 auto;
+    font-size: 0px;
+    background: #ffac60;
+    overflow: hidden;
+}
+.text {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 44px 0 0 25px;
+    color: #ffffff;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 1;
+}
+.box {
+    position: relative;
+    width: 430px;
+    height: 891px;
+    margin: 27px 0 0 0;
+    font-size: 0px;
+    background: #ffffff;
+    overflow: visible auto;
+    border-radius: 25px;
+}
+.text-2 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 28px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 3;
+}
+.text-3 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 4;
+}
+.text-4 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 6;
+}
+.text-5 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 7;
+}
+.text-6 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 9;
+}
+.text-7 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 10;
+}
+.text-8 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 12;
+}
+.text-9 {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 13;
+}
+.text-a {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 20;
+}
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 325px;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    z-index: 22;
+}
+.text-b {
+    flex-shrink: 0;
+    position: relative;
+    height: 24px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 21;
+}
+.pic {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: url(./assets/images/af114802-efa0-49e2-a68a-1c8f8da7fd29.png)
+        no-repeat center;
+    background-size: cover;
+    z-index: 22;
+}
+.text-c {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 25;
+}
+.box-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 325px;
+    height: 24px;
+    margin: 16px 0 0 55px;
+    z-index: 27;
+}
+.text-d {
+    flex-shrink: 0;
+    position: relative;
+    height: 24px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 26;
+}
+.img {
+    flex-shrink: 0;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: url(./assets/images/3f8f6910-d899-4b88-8827-349f91597a9a.png)
+        no-repeat center;
+    background-size: cover;
+    z-index: 27;
+}
+.text-e {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: 25px 0 0 40px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 31;
+}
+.wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 22px 0 0 55px;
+    background: #e6e6e6;
+    z-index: 33;
+    overflow: visible auto;
+    border-radius: 20px;
+}
+.pic-2 {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 20px 0 0 20px;
+    background: url(./assets/images/dcf4b618-cc6c-4830-bbd9-61a091807b6a.png)
+        no-repeat center;
+    background-size: cover;
+    z-index: 34;
+    border-radius: 20px;
+}
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 361px;
+    height: 57px;
+    margin: 24px 0 0 35px;
+    background: #ffac60;
+    z-index: 17;
+    border-radius: 25px;
+}
+.text-f {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 83px;
+    height: 24px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 17;
+}
+.box-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 227px;
+    height: 24px;
+    margin: 23px 0 0 102px;
+    z-index: 29;
+}
+.text-10 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 144px;
+    height: 24px;
+    color: #c0c0c0;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 28;
+}
+.text-11 {
+    flex-shrink: 0;
+    position: relative;
+    height: 24px;
+    color: #ffac60;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 29;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 300px; /* กำหนดขนาดให้ทุกช่องเท่ากัน */
+    margin-left: auto;
+    margin-right: 40px;
+    padding: 8px;
+    font-size: 16px;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    color: #27292f; /* เปลี่ยนสีตัวอักษรเป็นสีเข้ม */
+    background-color: #ffffff;
+    border: none; /* เอา border ออก */
+    border-bottom: 2px solid #c0c0c0; /* เพิ่มเส้นใต้ */
+    border-radius: 0; /* ไม่มีมุมโค้ง */
+    transition: border-bottom 0.3s ease, color 0.3s ease; /* เพิ่ม transition */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus {
+    border-bottom: 2px solid #ffac60; /* เปลี่ยนสีเส้นใต้เมื่อ focus */
+    outline: none; /* เอาเส้นกรอบขอบฟ้าออกเมื่อคลิก */
+    color: #000000; /* ทำให้สีตัวอักษรเข้มขึ้นเมื่อ focus */
+}
+
+
+
+label {
+    display: block;
+    margin-left: 40px; /* ให้ label ชิดซ้าย */
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    color: #27292f;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.pic-2 {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 20px 0;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 22px 0 0 55px;
+    background: #e6e6e6;
+    z-index: 33;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* ใช้เต็มพื้นที่ wrapper */
+    height: 100%; /* ใช้เต็มพื้นที่ wrapper */
+}
+
+.pic-2 img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain; /* ให้รูปขยายอย่างพอดีในกรอบ */
+}
+.section a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 57px; /* ให้ข้อความอยู่กึ่งกลางปุ่ม */
+    text-align: center;
+    background-color: #ffac60;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่ม transition */
+}
+
+.section a:hover {
+    background-color: #ff8c42; /* สีที่เปลี่ยนเมื่อ hover */
+    color: #ffffff; /* เปลี่ยนสีข้อความเมื่อ hover */
+}
+
+
+.box-3 a {
+    color: #ffac60;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.box-3 a:hover {
+    text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
+}
+

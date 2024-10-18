@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IT’s FOOD</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+Sans+TH:wght@700&display=swap" />
+        <link rel="stylesheet" href="/style/sign up_cus.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <span class="text">IT’s FOOD</span>
+            <div class="section">
+                <span class="text-2">Sign Up</span>
+                
+                <label for="name" class="text-3">ชื่อ</label>
+                <input type="text" id="name" class="input-field" placeholder="Enter your name" />
+
+                <label for="email" class="text-5">อีเมล</label>
+                <input type="email" id="email" class="input-field" placeholder="Enter your email" />
+
+                <label for="password" class="text-7">Password</label>
+                <div class="group">
+                    <input type="password" id="password" class="input-field" placeholder="Enter your password" />
+                    <div class="pic"><img src="/img/View.png" alt="View Password"></div>
+                </div>
+
+                <label for="repassword" class="text-9">Re-Type Password</label>
+                <div class="wrapper">
+                    <input type="password" id="repassword" class="input-field" placeholder="Re-type your password" />
+                    <div class="pic-2"><img src="/img/View.png" alt="View Password"></div>
+                </div>
+
+                <!-- ทำให้ SIGN UP เป็นปุ่มคลิกได้ -->
+                <div class="box">
+                    <button class="sign-up-button">SIGN UP</button>
+                </div>
+
+                <div class="group-2">
+                    <span class="text-c">Have an account?</span>
+                    <!-- ทำให้ LOG IN เป็นลิงก์คลิกได้ -->
+                    <a href="/login" class="text-d">LOG IN</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // คุณสามารถใส่โค้ด JavaScript เพื่อจัดการเหตุการณ์การคลิกของปุ่ม SIGN UP
+            document.querySelector('.sign-up-button').addEventListener('click', function() {
+                alert('SIGN UP clicked');
+                // โค้ดเพิ่มเติมสำหรับการสมัครสมาชิก เช่น ส่งข้อมูลไปยังเซิร์ฟเวอร์
+            });
+        </script>
+    </body>
+</html>
