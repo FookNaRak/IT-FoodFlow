@@ -1,0 +1,232 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+    overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.main-container {
+    position: relative;
+    width: 430px;
+    height: 932px;
+    margin: 0 auto;
+    background: #ffac60;
+    overflow: hidden;
+}
+.section {
+    position: relative;
+    width: 430px;
+    height: 108px;
+    margin: 0 0 0 0;
+    background: #ffffff;
+    z-index: 2;
+}
+.text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 141px;
+    height: 24px;
+    top: calc(50% - 12px);
+    left: calc(50% - 70px);
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 3;
+}
+.section-2 {
+    position: relative;
+    width: 430px;
+    height: 724px;
+    margin: 100px 0 0 0;
+    background: #ffffff;
+    overflow: visible auto;
+    border-radius: 25px;
+}
+.box {
+    position: relative;
+    width: 190px;
+    height: 140px;
+    margin: 97px 0 0 120px;
+    font-size: 0px;
+    background: #e6e6e6;
+    z-index: 9;
+    overflow: visible auto;
+    border-radius: 28px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.text-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    margin: 33px 0 0 80px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 11;
+}
+.text-3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+    height: 24px;
+    margin: 25px 0 0 20px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 12;
+}
+.section-3 {
+    position: relative;
+    width: 300px;
+    height: 120px;
+    margin: 33px 0 0 65px;
+    font-size: 0px;
+    background: #e6e6e6;
+    z-index: 14;
+    overflow: visible auto;
+    border-radius: 28px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.text-4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 136px;
+    height: 24px;
+    margin: 26px 0 0 82px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 17;
+}
+.text-5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 165px;
+    height: 24px;
+    margin: 20px 0 0 67px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 16;
+}
+.text-6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 24px;
+    top: 32px;
+    left: 29px;
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 18;
+}
+.pic {
+    position: absolute;
+    width: 17.088px;
+    height: 17.088px;
+    top: 35.829px;
+    left: 160.083px;
+    background: url(./assets/images/5f973234-30bb-438d-8861-831b5285175b.png)
+        no-repeat center;
+    background-size: cover;
+    z-index: 20;
+}
+.box-2 {
+    position: absolute;
+    width: 44.19%;
+    height: 10.36%;
+    top: 79.7%;
+    left: 27.91%;
+    background: #e6e6e6;
+    z-index: 6;
+    border-radius: 28px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.text-7 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 152px;
+    height: 24px;
+    top: calc(50% - 11.5px);
+    left: calc(50% - 76px);
+    color: #27292f;
+    font-family: LINE Seed Sans TH, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    z-index: 7;
+}
+.box-3 {
+    position: absolute;
+    width: 430px;
+    height: 90px;
+    bottom: 0;
+    left: 50%;
+    background: #ffffff;
+    transform: translate(-50%, 0);
+    z-index: 4;
+}
