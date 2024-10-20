@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT’s FOOD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LINE+Seed+Sans+TH:wght@700&display=swap" />
+    <link rel="stylesheet" href="/Shop Register.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <span class="text">Shop Register</span>
+        <div class="box">
+            <form id="shop-register-form" action="/signup" method="POST" enctype="multipart/form-data">
+                <label class="text-2">ชื่อร้าน</label>
+                <input class="text-3" type="text" name="shopName" placeholder="ex. watergingerbubu Restaurant" required />
+
+                <label class="text-4">ชื่อเจ้าของร้าน (ชื่อ)</label>
+                <input class="text-5" type="text" name="shopOwnerFirstName" placeholder="ex. โอฬาร" required />
+
+                <label class="text-4">นามสกุลเจ้าของร้าน</label>
+                <input class="text-5" type="text" name="shopOwnerLastName" placeholder="ex. เอก" required />
+
+                <label class="text-6">อีเมล</label>
+                <input class="text-7" type="email" name="shopEmail" placeholder="ex. nongmaxza_007@example.com" required />
+
+                <label class="text-8">เบอร์โทรศัพท์</label>
+                <input class="text-9" type="tel" name="shopOwnerTel" placeholder="ex. 097-XXX-XXXX" required />
+
+                <label class="text-a">Password</label>
+                <div class="group">
+                    <input class="text-b" type="password" name="password" placeholder="************" required />
+                </div>
+
+                <label class="text-c">Re-Type Password</label>
+                <div class="box-2">
+                    <input class="text-d" type="password" name="rePassword" placeholder="************" required />
+                </div>
+
+                <span class="text-e">Shop Profile Upload</span>
+                <div class="wrapper">
+                    <label for="profile-upload" class="pic-2">
+                        <img src="/img/Upload.png" alt="Upload">
+                    </label>
+                    <input id="profile-upload" type="file" name="shopPicture" accept="image/*" style="display: none;" />
+                </div>
+
+                <!-- ฟิลด์ที่ใช้สำหรับเก็บ userID -->
+                <input type="hidden" name="userID" value="ใส่ค่า userID ของผู้ใช้งาน">
+
+                <div class="section">
+                    <button type="submit" class="text-f">SIGN UP</button>
+                </div>
+            </form>
+
+            <div class="box-3">
+                <span class="text-10">Have an account?</span>
+                <a href="/login" class="text-11">LOG IN</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const profileUpload = document.getElementById('profile-upload');
+        const profileImg = document.querySelector('.pic-2 img');
+
+        profileUpload.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profileImg.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('shop-register-form').addEventListener('submit', function (event) {
+            const password = document.querySelector('input[name="password"]').value;
+            const rePassword = document.querySelector('input[name="rePassword"]').value;
+
+            if (password !== rePassword) {
+                event.preventDefault(); // Stop form submission
+                alert("Passwords do not match");
+            }
+        });
+    </script>
+</body>
+
+</html>
