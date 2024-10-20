@@ -24,19 +24,11 @@
                 <div class="tracking-box" id="open-tracking">Tracking</div>
             </section>
 
-            <!-- Restaurant Section
-            <section class="restaurants">
-                <h2>Restaurant</h2>
-                <div id="restaurant-grid" class="restaurant-grid">
-                    จะแสดงข้อมูลร้านอาหาร
-                </div>
-            </section> -->
-
             <!-- Shops Section -->
             <section class="shops">
                 <h2>Shops</h2>
                 <div id="shop-grid" class="shop-grid">
-                    <!-- จะแสดงข้อมูลร้านค้า -->
+                    <!-- Shops will be displayed here -->
                 </div>
             </section>
         </main>
@@ -59,7 +51,6 @@
                         <button class="delete-btn">🗑️</button>
                     </div>
                 </div>
-    
                 <div class="tracking-detail">
                     <img src="path/to/image" alt="item image">
                     <div class="item-info">
@@ -73,68 +64,102 @@
             </div>
         </div>
     </div>
-    
-    
 
+    <!-- Encapsulated JavaScript -->
     <script>
-        // ดึงข้อมูลร้านอาหารจาก server
-        fetch('/api/restaurants')
-            .then(response => response.json())
-            .then(data => {
-                const restaurantGrid = document.getElementById('restaurant-grid');
-                data.forEach(restaurant => {
-                    const restaurantItem = document.createElement('div');
-                    restaurantItem.className = 'restaurant-item';
-                    restaurantItem.innerHTML = `
-                        <p>${restaurant.name}</p>
-                    `;
-                    restaurantGrid.appendChild(restaurantItem);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching restaurants:', error);
-            });
+        class Shop {
+            #shopGrid;
 
-        // ดึงข้อมูลร้านค้าจาก server
-        fetch('/api/shops')
-            .then(response => response.json())
-            .then(data => {
-                const shopGrid = document.getElementById('shop-grid');
-                data.forEach(shop => {
+            constructor(shopGridId) {
+                this.#shopGrid = document.getElementById(shopGridId);
+            }
+
+            // Public method to fetch shops
+            fetchShops() {
+                fetch('/api/shops')
+                    .then(response => response.json())
+                    .then(data => this.#renderShops(data))
+                    .catch(error => {
+                        console.error('Error fetching shops:', error);
+                    });
+            }
+
+            // Private method to render shops
+            #renderShops(shops) {
+                shops.forEach(shop => {
                     const shopItem = document.createElement('div');
                     shopItem.className = 'shop-item';
                     shopItem.innerHTML = `
                         <p>${shop.shopName}</p>
                         <p>Location: ${shop.location}</p>
                     `;
-                    shopGrid.appendChild(shopItem);
+                    this.#shopGrid.appendChild(shopItem);
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching shops:', error);
-            });
-
-        // Get modal elements for tracking overlay
-        var modal = document.getElementById("tracking-modal");
-        var openModalBtn = document.getElementById("open-tracking");
-        var closeModalBtn = document.getElementsByClassName("close-btn")[0];
-
-        // Open modal when clicking the tracking section
-        openModalBtn.onclick = function () {
-            modal.style.display = "block";
-        };
-
-        // Close modal on clicking 'X'
-        closeModalBtn.onclick = function () {
-            modal.style.display = "none";
-        };
-
-        // Close modal when clicking outside the modal
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
             }
-        };
+
+            // Getter for the shopGrid (read-only)
+            get shopGrid() {
+                return this.#shopGrid;
+            }
+        }
+
+        class TrackingModal {
+            #modal;
+            #openBtn;
+            #closeBtn;
+
+            constructor(modalId, openBtnId, closeBtnClass) {
+                this.#modal = document.getElementById(modalId);
+                this.#openBtn = document.getElementById(openBtnId);
+                this.#closeBtn = document.getElementsByClassName(closeBtnClass)[0];
+                this.#initializeEvents();
+            }
+
+            // Private method to initialize events
+            #initializeEvents() {
+                this.#openBtn.onclick = () => this.#openModal();
+                this.#closeBtn.onclick = () => this.#closeModal();
+                window.onclick = (event) => {
+                    if (event.target == this.#modal) {
+                        this.#closeModal();
+                    }
+                };
+            }
+
+            // Private method to open modal
+            #openModal() {
+                this.#modal.style.display = "block";
+            }
+
+            // Private method to close modal
+            #closeModal() {
+                this.#modal.style.display = "none";
+            }
+
+            // Getter for the modal visibility state
+            get isModalOpen() {
+                return this.#modal.style.display === "block";
+            }
+
+            // Setter to open/close modal from outside
+            set modalVisible(isVisible) {
+                this.#modal.style.display = isVisible ? "block" : "none";
+            }
+        }
+
+        // Initialize classes when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const shopInstance = new Shop('shop-grid');
+            shopInstance.fetchShops();
+
+            const trackingModalInstance = new TrackingModal('tracking-modal', 'open-tracking', 'close-btn');
+
+            // Example of using the setter to open the modal
+            trackingModalInstance.modalVisible = true; // This will open the modal
+
+            // Example of using the getter to check if the modal is open
+            console.log(trackingModalInstance.isModalOpen); // Should log `true`
+        });
     </script>
 </body>
 </html>
